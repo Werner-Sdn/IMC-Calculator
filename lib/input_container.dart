@@ -3,20 +3,21 @@ import 'package:flutter/material.dart';
 class InputContainer extends StatelessWidget {
   final Color color;
   final Widget child;
+  final Function onTap;
 
-  InputContainer({@required this.color, this.child});
+  InputContainer({@required this.color, this.child, this.onTap});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        margin: EdgeInsets.all(10),
+        decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            width: 1.0,
-            color: Colors.white,
-          )),
-      child: child,
+        ),
+        child: child,
+      ),
     );
   }
 }

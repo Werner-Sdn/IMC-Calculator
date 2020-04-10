@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'shared.dart';
 
 class NextButton extends StatelessWidget {
   final String text;
@@ -10,20 +11,15 @@ class NextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: color,
-        border: Border.all(width: 2, color: Colors.white),
-        borderRadius: BorderRadius.circular(30),
-      ),
+      margin: EdgeInsets.only(top: 10),
+      color: color,
       child: Center(
         child: AutoSizeText(
           text,
-          style: TextStyle(
-            fontSize: 32,
-            letterSpacing: 8,
-            color: Colors.white,
-            fontWeight: FontWeight.w300,
+          maxLines: 1,
+          style: kTextStyle.copyWith(
+            fontWeight: FontWeight.w400,
+            letterSpacing: 6,
           ),
         ),
       ),
