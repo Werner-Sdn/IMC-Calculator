@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class InputContainer extends StatelessWidget {
+class PrimaryContainer extends StatelessWidget {
   final Color color;
   final Widget child;
   final Function onTap;
 
-  InputContainer({@required this.color, this.child, this.onTap});
+  PrimaryContainer({@required this.color, this.child, this.onTap});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

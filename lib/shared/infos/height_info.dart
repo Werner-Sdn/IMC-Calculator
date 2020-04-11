@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'shared.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:com/shared/constants/color.dart';
+import 'package:com/shared/constants/text.dart';
 
 class HeightSlider extends StatelessWidget {
   final int height;

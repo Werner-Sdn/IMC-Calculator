@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'input_page.dart';
+import 'pages/input_page.dart';
 
 void main() => runApp(ImcCalculator());
 
@@ -10,11 +10,10 @@ class ImcCalculator extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Imc Calculator',
-      theme: ThemeData(),
-      home: Scaffold(
-        backgroundColor: Color(0xFF141419),
-        body: InputPage(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xFF141419),
       ),
+      home: InputPage(),
     );
   }
 }

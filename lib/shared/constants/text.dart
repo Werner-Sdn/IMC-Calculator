@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
-const Color kInactiveInputColor = Color(0x203540A4);
-const Color kActiveInputColor = Color(0x403540A4);
-const Color kDeepBlue = Color(0xFF3540A4);
-
 const kTextStyle = TextStyle(
   color: Colors.white,
   fontSize: 28,
@@ -18,30 +14,6 @@ const kDigitStyle = TextStyle(
   letterSpacing: 2,
   fontWeight: FontWeight.w900,
 );
-
-class SimpleButton extends StatelessWidget {
-  final IconData icon;
-  final Function onPressed;
-
-  SimpleButton({@required this.icon, @required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: onPressed,
-      shape: CircleBorder(),
-      fillColor: Colors.white,
-      constraints: BoxConstraints.tightFor(
-        width: 48,
-        height: 48,
-      ),
-      child: Icon(
-        icon,
-        color: kDeepBlue,
-      ),
-    );
-  }
-}
 
 class UnitText extends StatelessWidget {
   final int value;
